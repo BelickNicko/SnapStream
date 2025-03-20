@@ -299,9 +299,9 @@ def download_frames(n_clicks, fps, start_time, end_time):
     if end_time is None:
         end_time = float('inf')
 
-    frames_dir = "frames_raw"
+    frames_dir = "frames_processed" 
     if not os.path.exists(frames_dir) or len(os.listdir(frames_dir)) == 0:
-        frames_dir = "frames_processed"
+        frames_dir = "frames_raw"
         if not os.path.exists(frames_dir) or len(os.listdir(frames_dir)) == 0:
             return html.Div(["Сначала нажмите 'Получить фреймы'."])
 
